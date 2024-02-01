@@ -21,7 +21,7 @@ function Navigation() {
                 : 'text-lg md:text-base text-gray-500'
             }`}
           >
-            About Me
+            Nav About Me
           </NavLink>
         </li>
         {/* Commented out other navigation items
