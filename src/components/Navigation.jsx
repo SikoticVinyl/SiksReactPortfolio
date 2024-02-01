@@ -24,6 +24,7 @@ function Navigation() {
             About Me
           </NavLink>
         </li>
+        {/* Commented out other navigation items
         <li className="mb-2 md:mb-0">
           <NavLink
             to="/resume"
@@ -66,7 +67,6 @@ function Navigation() {
                   School Projects
                 </NavLink>
               </li>
-              {/*Space for Freelance Porjects Logic in future */}
             </ul>
           )}
         </li>
@@ -81,7 +81,7 @@ function Navigation() {
           >
             Contact Me
           </NavLink>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );
