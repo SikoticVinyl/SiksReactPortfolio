@@ -19,7 +19,7 @@ function App() {
       <Navigation /> {/*Navigation component */}
       <Routes>
         <Route path="/" element={<AboutMe />} />
-        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/projects" element={<Projects />} />
         <Route path="/portfolio/personal" element={<PersonalProjects />} />
         <Route path="/portfolio/school" element={<SchoolProjects />} />
         {/*Route for Freelance - Uncomment when ready to use: <Route path="/portfolio/freelance" element={<FreelanceProjects />} />*/}
