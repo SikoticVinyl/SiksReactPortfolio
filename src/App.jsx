@@ -21,7 +21,6 @@ function App() {
   return (
     <BrowserRouter>
       <Header /> {Header}
-      <Navigation /> {Navigation}
       <Routes>
         <Route path="/" element={<AboutMe />} />
         <Route path="/portfolio" element={<PortfolioPage />} />
