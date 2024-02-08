@@ -20,7 +20,11 @@ function Navigation() {
             Contact
           </NavLink>
         </li>
-        {/* Uncomment or add other links as needed */}
+        <li>
+          <NavLink to="/resume" className={({ isActive }) => isActive ? 'font-bold text-blue-500' : 'text-gray-500'}>
+            Resume
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );

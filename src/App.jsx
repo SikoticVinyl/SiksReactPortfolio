@@ -9,11 +9,13 @@ import Footer from './components/Footer';
 
 import AboutMe from './components/AboutMe'; 
 import PortfolioPage from './components/PortfolioPage'; 
+import Resume from './components/Resume'; 
 import Contact from './components/Contact';
+
+// Future Setup
 //import PersonalProjects from './components/PersonalProjects';
 //import SchoolProjects from './components/SchoolProjects';
 // import FreelanceProjects from './components/FreelanceProjects'; 
-//import Resume from './components/Resume'; 
 
 function App() {
   return (
@@ -24,11 +26,10 @@ function App() {
         <Route path="/" element={<AboutMe />} />
         <Route path="/portfolio" element={<PortfolioPage />} />
         <Route path="/contact" element={<Contact />} />
-        {/*
+        <Route path="/resume" element={<Resume />} />
+        {/* Future Routes
         <Route path="/portfolio/personal" element={<PersonalProjects />} />
-        <Route path="/portfolio/school" element={<SchoolProjects />} />
-        <Route path="/resume" element={<Resume />} /> 
-        {/* Space for more routes as needed 
+        <Route path="/portfolio/school" element={<SchoolProjects />} /> 
         */}
       </Routes>
       <Footer /> {Footer}
