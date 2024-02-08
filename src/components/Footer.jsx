@@ -7,7 +7,7 @@ function Footer() {
   return (
     <footer className="bg-gray-800 py-4">
       <div className="container mx-auto flex justify-center items-center">
-        <a href="www.linkedin.com/in/danafulmerdev">
+        <a href="https://www.linkedin.com/in/danafulmerdev">
           <img
             src={linkedinIcon}
             alt="LinkedIn"
