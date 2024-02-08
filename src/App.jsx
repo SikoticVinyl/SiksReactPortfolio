@@ -8,12 +8,11 @@ import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 
 import AboutMe from './components/AboutMe'; 
-import Project from './components/Project';
 import PortfolioPage from './components/PortfolioPage'; 
+import Contact from './components/Contact';
 //import PersonalProjects from './components/PersonalProjects';
 //import SchoolProjects from './components/SchoolProjects';
 // import FreelanceProjects from './components/FreelanceProjects'; 
-//import Contact from './components/Contact';
 //import Resume from './components/Resume'; 
 
 function App() {
@@ -24,10 +23,10 @@ function App() {
       <Routes>
         <Route path="/" element={<AboutMe />} />
         <Route path="/portfolio" element={<PortfolioPage />} />
+        <Route path="/contact" element={<Contact />} />
         {/*
         <Route path="/portfolio/personal" element={<PersonalProjects />} />
         <Route path="/portfolio/school" element={<SchoolProjects />} />
-        <Route path="/contact" element={<Contact />} />
         <Route path="/resume" element={<Resume />} /> 
         {/* Space for more routes as needed 
         */}

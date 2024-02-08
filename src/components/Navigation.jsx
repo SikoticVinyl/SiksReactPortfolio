@@ -15,6 +15,11 @@ function Navigation() {
             Portfolio
           </NavLink>
         </li>
+        <li>
+          <NavLink to="/contact" className={({ isActive }) => isActive ? 'font-bold text-blue-500' : 'text-gray-500'}>
+            Contact
+          </NavLink>
+        </li>
         {/* Uncomment or add other links as needed */}
       </ul>
     </nav>
