@@ -1,0 +1,18 @@
+[
+    {
+      "id": 1,
+      "title": "TheCrazyPasswordGen",
+      "description": "One of my early coding assingments in bootcamp, create a Password Generator.",
+      "image": "/assets/",
+      "deployedUrl": "https://sikoticvinyl.github.io/TheCrazyPasswordGen/",
+      "repoUrl": "https://github.com/SikoticVinyl/TheCrazyPasswordGen"
+    },
+    {
+      "id": 2,
+      "title": "eNotes",
+      "description": "Another early bootcamp assignment, this time working on the backend with an RESTful API.",
+      "image": "/assets/",
+      "deployedUrl": "https://stormy-sands-88840-bd75ee7a710b.herokuapp.com/",
+      "repoUrl": "https://github.com/SikoticVinyl/eNotes"
+    }
+  ]
