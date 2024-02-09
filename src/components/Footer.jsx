@@ -7,25 +7,25 @@ function Footer() {
   return (
     <footer className="bg-gray-800 py-4">
       <div className="container mx-auto flex justify-center items-center">
-        <a href="https://www.linkedin.com/in/danafulmerdev">
+        <a href="https://www.linkedin.com/in/danafulmerdev" className="mx-2">
           <img
             src={linkedinIcon}
             alt="LinkedIn"
-            className="w-6 h-6 text-white hover:text-blue-500 mx-2"
+            className="w-8 h-8 text-white hover:text-blue-500"
           />
         </a>
-        <a href="https://github.com/SikoticVinyl">
+        <a href="https://github.com/SikoticVinyl" className="mx-2">
           <img
             src={githubIcon}
             alt="GitHub"
-            className="w-6 h-6 text-white hover:text-blue-500 mx-2"
+            className="w-8 h-8 text-white hover:text-blue-500"
           />
         </a>
-        <a href="https://venmo.com/u/DanaFulmer">
+        <a href="https://venmo.com/u/DanaFulmer" className="mx-2">
           <img
             src={venmoIcon}
             alt="Venmo"
-            className="w-6 h-6 text-white hover:text-blue-500 mx-2"
+            className="w-8 h-8 text-white hover:text-blue-500"
           />
         </a>
       </div>
