@@ -26,7 +26,7 @@ function Resume() {
         <p className="text-light-pink text-sm sm:text-base md:text-lg lg:text-xl">You can download my full resume below.</p>
         <div className="flex justify-center">
           <a href="/DanaFulmerTechResume.pdf" download="DanaFulmerTechResume.pdf" className="relative inline-block">
-            <img src={PanelsBlank} alt="Download Resume" className="w-3/5 md:w-2/5 lg:w-3/5 h-auto object-cover mx-auto" />
+            <img src={PanelsBlank} alt="Download Resume" className="w-3/5 md:w-2/5 lg:w-4/5 h-auto object-cover mx-auto" />
             <span className="absolute top-0 left-0 w-full h-full flex items-center justify-center text-white font-bold py-2 px-4">
               Download Resume
             </span>

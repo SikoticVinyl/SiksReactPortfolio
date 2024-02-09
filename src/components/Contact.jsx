@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PanelsBlank from '../assets/Panels_Blank.png';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -57,25 +58,31 @@ function Contact() {
 
   return (
     <section className="contact py-8 px-4">
-      <h2 className="text-3xl font-bold mb-4 text-center sm:text-left">Contact Me</h2>
-      <form onSubmit={handleSubmit} noValidate className="max-w-xl mx-auto">
-        <div className="mb-6">
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
-          <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} onBlur={handleBlur} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-4 leading-tight focus:outline-none focus:ring-blue-500 focus:border-blue-500" />
-          {formErrors.name && <p className="mt-2 text-sm text-red-600">{formErrors.name}</p>}
+      <div className="max-w-md mx-auto">
+        <div className="bg-dark-purple bg-opacity-40 rounded-lg p-6">
+          <div className="flex flex-col items-center space-y-4 mb-8">
+            <h2 className="text-light-pink text-3xl md:text-5xl font-bold text-center">Contact Me</h2>
+          </div>
+          <form onSubmit={handleSubmit} noValidate>
+            <div className="mb-6">
+              <label htmlFor="name" className="block text-lg font-semibold text-light-pink">Name</label>
+              <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} onBlur={handleBlur} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-4 leading-tight focus:outline-none focus:ring-blue-500 focus:border-blue-500" />
+              {formErrors.name && <p className="mt-2 text-sm text-red-600">{formErrors.name}</p>}
+            </div>
+            <div className="mb-6">
+              <label htmlFor="email" className="block text-lg font-semibold text-light-pink">Email</label>
+              <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} onBlur={handleBlur} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-4 leading-tight focus:outline-none focus:ring-blue-500 focus:border-blue-500" />
+              {formErrors.email && <p className="mt-2 text-sm text-red-600">{formErrors.email}</p>}
+            </div>
+            <div className="mb-6">
+              <label htmlFor="message" className="block text-lg font-semibold text-light-pink">Message</label>
+              <textarea id="message" name="message" value={formData.message} onChange={handleChange} onBlur={handleBlur} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-4 leading-tight focus:outline-none focus:ring-blue-500 focus:border-blue-500 h-32"></textarea>
+              {formErrors.message && <p className="mt-2 text-sm text-red-600">{formErrors.message}</p>}
+            </div>
+            <button type="submit" className="w-full bg-dark-purple hover:bg-blue-700 text-light-pink font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Submit</button>
+          </form>
         </div>
-        <div className="mb-6">
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
-          <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} onBlur={handleBlur} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-4 leading-tight focus:outline-none focus:ring-blue-500 focus:border-blue-500" />
-          {formErrors.email && <p className="mt-2 text-sm text-red-600">{formErrors.email}</p>}
-        </div>
-        <div className="mb-6">
-          <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
-          <textarea id="message" name="message" value={formData.message} onChange={handleChange} onBlur={handleBlur} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-4 leading-tight focus:outline-none focus:ring-blue-500 focus:border-blue-500 h-32"></textarea>
-          {formErrors.message && <p className="mt-2 text-sm text-red-600">{formErrors.message}</p>}
-        </div>
-        <button type="submit" className="w-full sm:w-auto bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Submit</button>
-      </form>
+      </div>
     </section>
   );
 }
