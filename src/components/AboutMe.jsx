@@ -1,14 +1,14 @@
 import React from 'react';
-import DanaImage from '../assets/Dana.jpg'; 
+import DanaImage from '../assets/Dana.jpg';
 
 function AboutMe() {
   return (
-    <main className="container mx-auto py-8">
-      <section className="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8 sm:flex-col-reverse" id="AboutMe">
-        <div className="md:w-1/2 border rounded-full p-8 text-center bg-opacity-60 bg-purple-400">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-center glow">About Me!</h2>
-          <p className="text-gray-700 text-center glow">
-          Hello! I’m Dana Fulmer, a burgeoning full-stack web developer with a knack for creating dynamic user experiences. Currently immersed in an intensive boot camp, I’m on a journey to transform the canvas of the web — one line of code at a time. My latest endeavor? This portfolio, handcrafted with React, which stands as a testament to my evolving craft.
+    <main className="container mx-auto py-8 px-4">
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-8" id="AboutMe">
+        <div className="md:col-span-2 bg-purple-200 bg-opacity-50 rounded-3xl p-8 text-center shadow-xl" style={{ backdropFilter: 'blur(10px)' }}>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 text-center text-purple-900">About Me!</h2>
+          <p className="text-base md:text-lg lg:text-xl text-gray-800">
+            Hello! I’m Dana Fulmer, a burgeoning full-stack web developer with a knack for creating dynamic user experiences. Currently immersed in an intensive boot camp, I’m on a journey to transform the canvas of the web — one line of code at a time. My latest endeavor? This portfolio, handcrafted with React, which stands as a testament to my evolving craft.
             <br /><br />
             Nestled in the picturesque vistas of Southern Utah, St. George isn't just my home; it's my playground. When I'm not immersed in code, you can find me leading a vibrant gaming community on Discord, delving into virtual worlds, or enjoying the great outdoors with my boyfriend and our beloved quartet of pets. Whether cycling through the scenic byways or carving down snow-clad slopes, I believe in living life to the fullest.
             <br /><br />
@@ -19,8 +19,8 @@ function AboutMe() {
             As I pivot my career path towards the tech industry, I bring with me a unique blend of problem-solving abilities, a customer-centric mindset, and a relentless desire to learn. I’m excited to explore opportunities where I can contribute, grow, and make a tangible impact. Let's connect and create the future!
           </p>
         </div>
-        <div className="md:w-1/2">
-          <img id="me" src={DanaImage} alt="Picture of Dana" className="w-full md:max-w-sm mx-auto rounded-full" />
+        <div className="md:col-span-1 flex justify-center items-center">
+          <img id="me" src={DanaImage} alt="Picture of Dana" className="rounded-lg object-cover w-full h-full max-w-none" style={{ minHeight: '300px' }} />
         </div>
       </section>
     </main>
