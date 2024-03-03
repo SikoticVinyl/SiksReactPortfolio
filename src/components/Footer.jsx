@@ -5,7 +5,7 @@ import venmoIcon from '../assets/Venmo.png';
 
 function Footer() {
   return (
-    <footer className="bg-gray-800 py-4">
+    <footer className="bg-gray-800 py-4 mt-8">
       <div className="container mx-auto flex justify-center items-center">
         <a href="https://www.linkedin.com/in/danafulmerdev" className="mx-2">
           <img
