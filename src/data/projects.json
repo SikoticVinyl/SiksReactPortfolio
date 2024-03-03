@@ -1,11 +1,11 @@
 [
   {
     "id": 1,
-    "title": "TheCrazyPasswordGen",
-    "description": "One of my early coding assignments in bootcamp, create a Password Generator.",
-    "image": "../assets/CrazyPassGen.png",
-    "deployedUrl": "https://sikoticvinyl.github.io/TheCrazyPasswordGen/",
-    "repoUrl": "https://github.com/SikoticVinyl/TheCrazyPasswordGen",
+    "title": "PreWork Study Guide",
+    "description": "As I said, I seem to enjoy the backend, here is where I began getting into MongoDB!",
+    "image": "/assets/placeholder",
+    "deployedUrl": "",
+    "repoUrl": "https://github.com/SikoticVinyl/GeneratingSteamHeat",
     "type": "school"
   },
   {
@@ -51,6 +51,42 @@
     "image": "/assets/placeholder",
     "deployedUrl": "https://www.youtube.com/watch?v=wBqaDHDaTxE",
     "repoUrl": "https://github.com/SikoticVinyl/MongooseMindMap",
+    "type": "school"
+  },
+  {
+    "id": 7,
+    "title": "TTRPG-Inventory-Bot BotOfHolding",
+    "description": "This project was a group project that I was part of, it was a really fun idea and I learned a lot about working with others in a coding environment. I also learned a lot about the Discord API. Building the bot was fun but I also learned about trying to keep a project organized and on track with a group. There was some major hurdles with the authentication and routing that prevented deployment. Some of us will be re-doing this together with our more developed skills as a passion project.",
+    "image": "/assets/placeholder",
+    "deployedUrl": "",
+    "repoUrl": "https://github.com/eymerin/TTRPG-Inventory-Bot",
+    "type": "school"
+  },
+  {
+    "id": 8,
+    "title": "GeneratingSteamHeat",
+    "description": "This is a README Generator that I created as a homework assignment. I was so proud of it, I used it to create the README for this portfolio!",
+    "image": "/assets/placeholder",
+    "deployedUrl": "",
+    "repoUrl": "https://github.com/SikoticVinyl/GeneratingSteamHeat",
+    "type": "school"
+  },
+  {
+    "id": 9,
+    "title": "TheCrazyPasswordGen",
+    "description": "One of my early coding assignments in bootcamp, create a Password Generator.",
+    "image": "../assets/CrazyPassGen.png",
+    "deployedUrl": "https://sikoticvinyl.github.io/TheCrazyPasswordGen/",
+    "repoUrl": "https://github.com/SikoticVinyl/TheCrazyPasswordGen",
+    "type": "school"
+  },
+  {
+    "id": 10,
+    "title": "Forecaster",
+    "description": "This was a fun little project that I did in bootcamp that I actually struggled a lot with. I learned a lot about APIs and how to use them, althrough I have learned more since. Likely will revisit this project in the future and fix it up.",
+    "image": "../assets/WeatherDashboard.png",
+    "deployedUrl": "https://sikoticvinyl.github.io/Forecaster/",
+    "repoUrl": "https://github.com/SikoticVinyl/Forecaster",
     "type": "school"
   }
 ]
