@@ -1,50 +1,56 @@
 [
-    {
-      "id": 1,
-      "title": "TheCrazyPasswordGen",
-      "description": "One of my early coding assingments in bootcamp, create a Password Generator.",
-      "image": "../assets/CrazyPassGen.png",
-      "deployedUrl": "https://sikoticvinyl.github.io/TheCrazyPasswordGen/",
-      "repoUrl": "https://github.com/SikoticVinyl/TheCrazyPasswordGen"
-    },
-    {
-      "id": 2,
-      "title": "EconoMe",
-      "description": "My Final Project of Bootcamp, a wonderfully dynamic budgeting app created using React",
-      "image": "/assets/comingsoon",
-      "deployedUrl": "Coming Soon",
-      "repoUrl": "https://github.com/SikoticVinyl/EconoMe"
-    },
-    {
-      "id": 3,
-      "title": "Original Portfolio",
-      "description": "The first iteration of my portfolio as I was learning. I love to see how far I have come!",
-      "image": "../assets/OriginalPortfolio.png",
-      "deployedUrl": "https://sikoticvinyl.github.io/DanaPortfolio/",
-      "repoUrl": "https://github.com/SikoticVinyl/DanaPortfolio"
-    },
-    {
-      "id": 4,
-      "title": "StaffSync",
-      "description": "I remember this being a fun backend assingment that I blasted through. Should have realized then how well I was picking up database CRUD functions.",
-      "image": "/assets/placeholder",
-      "deployedUrl": "https://www.youtube.com/watch?v=TLx2vBaX-iA",
-      "repoUrl": "https://github.com/SikoticVinyl/StaffSync"
-    },
-    {
-      "id": 5,
-      "title": "eNotes",
-      "description": "Another early bootcamp assignment, this time working on the backend with an RESTful API.",
-      "image": "../assets/NoteTaker.png",
-      "deployedUrl": "https://stormy-sands-88840-bd75ee7a710b.herokuapp.com/",
-      "repoUrl": "https://github.com/SikoticVinyl/eNotes"
-    },
-    {
-      "id": 6,
-      "title": "Mongoose Mind Map",
-      "description": "As I said I seem to enjoy the backend, here is where I began getting into MongoDB!",
-      "image": "/assets/placeholder",
-      "deployedUrl": "https://www.youtube.com/watch?v=wBqaDHDaTxE",
-      "repoUrl": "https://github.com/SikoticVinyl/MongooseMindMap"
-    }
-  ]
+  {
+    "id": 1,
+    "title": "TheCrazyPasswordGen",
+    "description": "One of my early coding assignments in bootcamp, create a Password Generator.",
+    "image": "../assets/CrazyPassGen.png",
+    "deployedUrl": "https://sikoticvinyl.github.io/TheCrazyPasswordGen/",
+    "repoUrl": "https://github.com/SikoticVinyl/TheCrazyPasswordGen",
+    "type": "school"
+  },
+  {
+    "id": 2,
+    "title": "EconoMe",
+    "description": "My Final Project of Bootcamp, a wonderfully dynamic budgeting app created using React",
+    "image": "/assets/comingsoon",
+    "deployedUrl": "https://econome-rqta.onrender.com",
+    "repoUrl": "https://github.com/SikoticVinyl/EconoMe",
+    "type": "school"
+  },
+  {
+    "id": 3,
+    "title": "Original Portfolio",
+    "description": "The first iteration of my portfolio as I was learning. I love to see how far I have come!",
+    "image": "../assets/OriginalPortfolio.png",
+    "deployedUrl": "https://sikoticvinyl.github.io/DanaPortfolio/",
+    "repoUrl": "https://github.com/SikoticVinyl/DanaPortfolio",
+    "type": "school"
+  },
+  {
+    "id": 4,
+    "title": "StaffSync",
+    "description": "I remember this being a fun backend assignment that I blasted through. Should have realized then how well I was picking up database CRUD functions.",
+    "image": "/assets/placeholder",
+    "deployedUrl": "https://www.youtube.com/watch?v=TLx2vBaX-iA",
+    "repoUrl": "https://github.com/SikoticVinyl/StaffSync",
+    "type": "school"
+  },
+  {
+    "id": 5,
+    "title": "eNotes",
+    "description": "Another early bootcamp assignment, this time working on the backend with an RESTful API.",
+    "image": "../assets/NoteTaker.png",
+    "deployedUrl": "https://stormy-sands-88840-bd75ee7a710b.herokuapp.com/",
+    "repoUrl": "https://github.com/SikoticVinyl/eNotes",
+    "type": "school"
+  },
+  {
+    "id": 6,
+    "title": "Mongoose Mind Map",
+    "description": "As I said, I seem to enjoy the backend, here is where I began getting into MongoDB!",
+    "image": "/assets/placeholder",
+    "deployedUrl": "https://www.youtube.com/watch?v=wBqaDHDaTxE",
+    "repoUrl": "https://github.com/SikoticVinyl/MongooseMindMap",
+    "type": "school"
+  }
+]

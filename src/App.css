@@ -35,6 +35,26 @@ body {
   height: 12px;
 }
 
+.dropdown {
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  margin: 10px 0;
+  padding: 10px 20px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown:hover {
+  background-color: #0056b3;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
 footer {
   position: fixed;
   bottom: 0;
