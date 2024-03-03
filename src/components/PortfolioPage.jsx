@@ -3,29 +3,48 @@ import Project from './Project';
 import projectData from '../data/projects.json';
 
 const PortfolioPage = () => {
-  const [visibleType, setVisibleType] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('');
 
-  const toggleVisibility = (type) => {
-    setVisibleType(visibleType === type ? '' : type);
+  const toggleCategory = (category) => {
+    setSelectedCategory(selectedCategory === category ? '' : category);
   };
 
   return (
-    <section className="portfolio">
-      <h2 className="text-3xl font-bold mb-4">My Projects</h2>
-      <div className="dropdowns">
-        {/* Dropdown Titles */}
-        <div className="dropdown" onClick={() => toggleVisibility('personal')}>Personal Projects</div>
-        <div className="dropdown" onClick={() => toggleVisibility('school')}>School Projects</div>
-        <div className="dropdown" onClick={() => toggleVisibility('freelance')}>Freelance Projects</div>
+    <div className="flex flex-col items-center mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Category toggles */}
+      <div className="flex flex-wrap justify-center gap-4 my-4">
+        <div
+          onClick={() => toggleCategory('Personal')}
+          className="cursor-pointer p-2 rounded bg-purple-600 text-white"
+        >
+          {selectedCategory === 'Personal' ? '▼ Personal Passion Projects' : '▶ Personal Passion Projects'}
+        </div>
+        <div
+          onClick={() => toggleCategory('Bootcamp')}
+          className="cursor-pointer p-2 rounded bg-purple-600 text-white"
+        >
+          {selectedCategory === 'Bootcamp' ? '▼ Boot Camp Projects' : '▶ Boot Camp Projects'}
+        </div>
+        <div
+          onClick={() => toggleCategory('Freelance')}
+          className="cursor-pointer p-2 rounded bg-purple-600 text-white"
+        >
+          {selectedCategory === 'Freelance' ? '▼ Freelance Work' : '▶ Freelance Work'}
+        </div>
       </div>
-      
-      {/* Projects Grid */}
-      <div className="projects-grid">
-        {projectData.filter(project => visibleType === '' || project.type === visibleType).map(project => (
+
+      {/* Projects grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {projectData.filter(project => {
+          if (selectedCategory === 'Personal') return project.type === 'personal';
+          if (selectedCategory === 'Bootcamp') return project.type === 'school';
+          if (selectedCategory === 'Freelance') return project.type === 'freelance';
+          return false;
+        }).map(project => (
           <Project key={project.id} {...project} />
         ))}
       </div>
-    </section>
+    </div>
   );
 };
 

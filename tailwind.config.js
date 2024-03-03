@@ -1,6 +1,5 @@
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-  darkMode: false,
+  content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   theme: {
     extend: {
       colors: {
@@ -11,7 +10,7 @@ module.exports = {
       },
       backgroundColor: {
         '91C8FF': '#91C8FF',
-        '91C8FF-dark': '#7daecc', // Darkened version of Light Blue for hover state
+        '91C8FF-dark': '#7daecc',
         'CAB8FF': '#CAB8FF',
       },
       textColor: {
@@ -20,6 +19,5 @@ module.exports = {
       }
     },
   },
-  variants: {},
   plugins: [],
 }
