@@ -10,7 +10,8 @@ const PortfolioPage = () => {
   };
 
   return (
-    <div className="flex flex-col items-center mx-auto px-4 sm:px-6 lg:px-8">
+    // Added mb-16 to the outer div for margin bottom. Adjust the value as needed (e.g., mb-10, mb-20) to get the desired space
+    <div className="flex flex-col items-center mx-auto px-4 sm:px-6 lg:px-8 mb-16">
       {/* Category toggles */}
       <div className="flex flex-wrap justify-center gap-4 my-4">
         <div
@@ -34,7 +35,7 @@ const PortfolioPage = () => {
       </div>
 
       {/* Projects grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-20">
         {projectData.filter(project => {
           if (selectedCategory === 'Personal') return project.type === 'personal';
           if (selectedCategory === 'Bootcamp') return project.type === 'school';

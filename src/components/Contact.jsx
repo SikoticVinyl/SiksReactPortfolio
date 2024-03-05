@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import PanelsBlank from '../assets/Panels_Blank.png';
+import emailjs from 'emailjs-com';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -47,12 +47,28 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Validate all fields on submit
     Object.keys(formData).forEach(key => validateField(key, formData[key]));
 
     if (Object.keys(formErrors).every((key) => !formErrors[key])) {
-      console.log("Form submitted", formData);
-      // Submit form logic here
+      emailjs.sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        e.target,
+        import.meta.env.VITE_EMAILJS_USER_ID
+      )
+      .then((result) => {
+          console.log(result.text);
+          alert('Message sent successfully');
+          // Reset form data
+          setFormData({
+            name: '',
+            email: '',
+            message: '',
+          });
+      }, (error) => {
+          console.log(error.text);
+          alert('Failed to send the message, please try again.');
+      });
     }
   };
 
