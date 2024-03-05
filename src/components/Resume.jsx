@@ -5,14 +5,23 @@ function Resume() {
   const proficiencies = [
     "HTML/CSS",
     "JavaScript (ES6+)",
-    "React",
+    "React.js",
     "Node.js",
     "Discord.js",
-    "Express",
+    "Express.js",
     "MongoDB",
     "SQL (MySQL/noSQL)",
     "Git and GitHub",
     "Responsive Design",
+    "jQuery",
+    "Tailwind CSS",
+    "Bootstrap",
+    "APIs",
+    "GraphQL",
+    "Apollo Client/Server",
+    "RESTful APIs",
+    "JWT Authentication",
+    "Deployment (Heroku, Netlify, Render, GitHub Pages)",
   ];
 
   return (
