@@ -3,8 +3,8 @@ import DanaImage from '../assets/Dana.jpg';
 
 function AboutMe() {
   return (
-    <main className="container mx-auto pt-8 px-4 mb-">
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20" id="AboutMe">
+    <main className="container mx-auto pt-8 px-4 spacing">
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8" id="AboutMe">
         <div className="md:col-span-2 bg-purple-200 bg-opacity-50 rounded-3xl p-8 text-center shadow-xl overflow-auto" style={{ maxHeight: '80vh', backdropFilter: 'blur(10px)' }}>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 text-center text-purple-900">About Me!</h2>
           <p className="text-base md:text-lg lg:text-xl text-gray-800">

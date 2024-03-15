@@ -26,7 +26,7 @@ function Resume() {
 
   return (
     <section className="flex flex-col items-center py-8 px-4">
-    <div className="w-full max-w-2xl flex flex-col items-center space-y-4">
+    <div className="w-full max-w-2xl flex flex-col items-center space-y-4 spacing">
       <div className="w-full flex flex-col justify-center items-center relative mb-8">
         <img src={PanelsBlank} alt="Background" className="w-1/2 h-auto object-cover" />
         <h2 className="text-dark-purple text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center absolute">Resume</h2>
