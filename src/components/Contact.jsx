@@ -74,7 +74,7 @@ function Contact() {
 
   return (
     <section className="contact py-8 px-4">
-      <div className="max-w-md mx-auto">
+      <div className="max-w-md mx-auto spacing">
         <div className="bg-dark-purple bg-opacity-40 rounded-lg p-6">
           <div className="flex flex-col items-center space-y-4 mb-8">
             <h2 className="text-light-pink text-3xl md:text-5xl font-bold text-center">Contact Me</h2>
