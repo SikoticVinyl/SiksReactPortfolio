@@ -1,8 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
+import { ChevronDown } from 'lucide-react';
 
 function Navigation() {
   const [isPortfolioOpen, setIsPortfolioOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsPortfolioOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const togglePortfolio = () => {
+    setIsPortfolioOpen(!isPortfolioOpen);
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900 bg-opacity-50 backdrop-blur-sm">
@@ -20,28 +39,19 @@ function Navigation() {
               About Me
             </NavLink>
           </li>
-          <li 
-            className="relative group"
-            onMouseEnter={() => setIsPortfolioOpen(true)}
-            onMouseLeave={() => setIsPortfolioOpen(false)}
-          >
+          <li ref={dropdownRef} className="relative">
             <button 
-              className="text-lg text-white hover:text-purple-400 transition-colors duration-200"
+              onClick={togglePortfolio}
+              className="text-lg text-white hover:text-purple-400 transition-colors duration-200 flex items-center"
             >
               Portfolio
+              <ChevronDown className={`ml-1 w-4 h-4 transition-transform duration-200 ${isPortfolioOpen ? 'rotate-180' : ''}`} />
             </button>
-            <div 
-              className={`
-                absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-gray-800 ring-1 ring-black ring-opacity-5
-                transition-opacity duration-150 ease-in-out
-                ${isPortfolioOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}
-              `}
-            >
-              <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+            {isPortfolioOpen && (
+              <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-gray-800 ring-1 ring-black ring-opacity-5 py-1">
                 <NavLink 
                   to="/portfolio/bootcamp" 
                   className="block px-4 py-2 text-sm text-white hover:bg-gray-700" 
-                  role="menuitem"
                   onClick={() => setIsPortfolioOpen(false)}
                 >
                   Bootcamp Projects
@@ -49,13 +59,12 @@ function Navigation() {
                 <NavLink 
                   to="/portfolio/personal" 
                   className="block px-4 py-2 text-sm text-white hover:bg-gray-700" 
-                  role="menuitem"
                   onClick={() => setIsPortfolioOpen(false)}
                 >
                   Personal Projects
                 </NavLink>
               </div>
-            </div>
+            )}
           </li>
           <li>
             <NavLink 
