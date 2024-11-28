@@ -3,54 +3,61 @@ import { NavLink } from 'react-router-dom';
 
 function Navigation() {
   return (
-    <nav>
-      <ul className="nav-links flex flex-wrap justify-center gap-2 text-lg sm:text-xl md:text-2xl">
-        <li>
-          <NavLink 
-            to="/" 
-            className={({ isActive }) => 
-              isActive ? 'text-white font-bold' : 'text-light-pink'
-            }
-          >
-            About Me
-          </NavLink>
-        </li>
-        <li>
-          <NavLink 
-            to="/portfolio" 
-            className={({ isActive }) => 
-              isActive ? 'text-white font-bold' : 'text-light-pink'
-            }
-          >
-            Portfolio
-          </NavLink>
-        </li>
-        <li>
-          <NavLink 
-            to="/contact" 
-            className={({ isActive }) => 
-              isActive ? 'text-white font-bold' : 'text-light-pink'
-            }
-          >
-            Contact
-          </NavLink>
-        </li>
-        <li>
-          <NavLink 
-            to="/resume" 
-            className={({ isActive }) => 
-              isActive ? 'text-white font-bold' : 'text-light-pink'
-            }
-          >
-            Resume
-          </NavLink>
-        </li>
-      </ul>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900 bg-opacity-50 backdrop-blur-sm">
+      <div className="max-w-6xl mx-auto px-4">
+        <ul className="flex items-center justify-center space-x-8 py-4">
+          <li>
+            <NavLink 
+              to="/" 
+              className={({ isActive }) => 
+                `text-lg transition-colors duration-200 hover:text-purple-400 ${
+                  isActive ? 'text-purple-400 font-bold' : 'text-white'
+                }`
+              }
+            >
+              About Me
+            </NavLink>
+          </li>
+          <li>
+            <NavLink 
+              to="/portfolio" 
+              className={({ isActive }) => 
+                `text-lg transition-colors duration-200 hover:text-purple-400 ${
+                  isActive ? 'text-purple-400 font-bold' : 'text-white'
+                }`
+              }
+            >
+              Portfolio
+            </NavLink>
+          </li>
+          <li>
+            <NavLink 
+              to="/contact" 
+              className={({ isActive }) => 
+                `text-lg transition-colors duration-200 hover:text-purple-400 ${
+                  isActive ? 'text-purple-400 font-bold' : 'text-white'
+                }`
+              }
+            >
+              Contact
+            </NavLink>
+          </li>
+          <li>
+            <NavLink 
+              to="/resume" 
+              className={({ isActive }) => 
+                `text-lg transition-colors duration-200 hover:text-purple-400 ${
+                  isActive ? 'text-purple-400 font-bold' : 'text-white'
+                }`
+              }
+            >
+              Resume
+            </NavLink>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 }
 
 export default Navigation;
-
-
-

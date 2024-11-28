@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import './index.css';
 
-import Header from './components/Header';
+// import Header from './components/Header';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 
@@ -20,10 +20,9 @@ import Contact from './components/Contact';
 function App() {
   return (
     <BrowserRouter>
-      <div className="flex flex-col min-h-screen bg-gray-900 text-white">
-        <Header />
+      <div className="min-h-screen bg-gradient-to-b from-gray-900 via-purple-900 to-gray-900">
         <Navigation />
-        <main className="flex-grow">
+        <div className="pt-16 pb-16"> {/* Add padding for fixed header and footer */}
           <Routes>
             <Route path="/" element={<AboutMe />} />
             <Route path="/portfolio" element={<PortfolioPage />} />
@@ -33,7 +32,7 @@ function App() {
               <Route path="/portfolio/personal" element={<PersonalProjects />} />
               <Route path="/portfolio/school" element={<SchoolProjects />} /> */}
           </Routes>
-        </main>
+        </div>
         <Footer />
       </div>
     </BrowserRouter>
