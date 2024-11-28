@@ -20,22 +20,24 @@ import Contact from './components/Contact';
 function App() {
   return (
     <BrowserRouter>
-      <Header /> {Header}
-      <Routes>
-        <Route path="/" element={<AboutMe />} />
-        <Route path="/portfolio" element={<PortfolioPage />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/resume" element={<Resume />} />
-        {/* Future Routes
-        <Route path="/portfolio/personal" element={<PersonalProjects />} />
-        <Route path="/portfolio/school" element={<SchoolProjects />} /> 
-        */}
-      </Routes>
-      <Footer /> {Footer}
+      <div className="flex flex-col min-h-screen bg-gray-900 text-white">
+        <Header />
+        <Navigation />
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<AboutMe />} />
+            <Route path="/portfolio" element={<PortfolioPage />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="/contact" element={<Contact />} />
+            {/* Future Routes
+              <Route path="/portfolio/personal" element={<PersonalProjects />} />
+              <Route path="/portfolio/school" element={<SchoolProjects />} /> */}
+          </Routes>
+        </main>
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 }
 
 export default App;
-
-
