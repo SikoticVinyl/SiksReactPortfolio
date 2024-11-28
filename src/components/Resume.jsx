@@ -1,61 +1,87 @@
 import React from 'react';
-import PanelsBlank from '../assets/Panels_Blank.png'
+import { Sparkles } from './Sparkles';
+import { Meteors } from './Meteors';
+import { Download, Code, Brain } from 'lucide-react';
 
 function Resume() {
-  const proficiencies = [
-    "HTML/CSS",
-    "JavaScript (ES6+)",
-    "React.js",
-    "Node.js",
-    "Discord.js",
-    "Express.js",
-    "MongoDB",
-    "SQL (MySQL/noSQL)",
-    "Git and GitHub",
-    "Responsive Design",
-    "jQuery",
-    "Tailwind CSS",
-    "Bootstrap",
-    "APIs",
-    "GraphQL",
-    "Apollo Client/Server",
-    "RESTful APIs",
-    "JWT Authentication",
-    "Deployment (Heroku, Netlify, Render, GitHub Pages)",
+  const webDevelopmentSkills = [
+    "HTML/CSS", "JavaScript (ES6+)", "React.js", "Node.js", "Express.js",
+    "MongoDB", "SQL (MySQL/PostgreSQL)", "Git and GitHub", "Responsive Design",
+    "Tailwind CSS", "Bootstrap", "RESTful APIs", "GraphQL", "Apollo Client/Server",
+    "JWT Authentication", "Deployment (Heroku, Netlify, Render, GitHub Pages)",
+  ];
+
+  const aiSkills = [
+    "Python programming with AI focus", "TensorFlow", "PyTorch", "Pandas",
+    "NumPy", "Scikit-learn", "Data processing and manipulation",
+    "Machine learning (supervised and unsupervised)", "Neural networks and deep learning",
+    "Natural Language Processing (NLP)", "Transformers", "Data visualization",
+    "API interaction for AI services", "AI ethics and emerging technologies",
   ];
 
   return (
-    <section className="flex flex-col items-center py-8 px-4">
-      <div className="w-full max-w-xl flex flex-col items-center space-y-4 spacing">
-        <div className="w-full flex flex-col justify-center items-center relative mb-8">
-          <img src={PanelsBlank} alt="Background" className="w-1/2 h-auto object-cover" />
-          <h2 className="text-dark-purple text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center absolute">Resume</h2>
-        </div>
-        <div className="bg-purple-200 bg-opacity-50 rounded-3xl p-8 text-center shadow-xl overflow-auto" style={{ maxHeight: '80vh', backdropFilter: 'blur(10px)' }}>
-          <p className="text-gray-800 text-sm sm:text-base md:text-lg lg:text-xl mb-4">You can download my full resume below.</p>
-          <div className="flex justify-center">
-            <a href="/DanaFulmerTechResume.pdf" download="DanaFulmerTechResume.pdf" className="relative inline-block">
-              <img src={PanelsBlank} alt="Download Resume" className="w-3/5 md:w-2/5 lg:w-4/5 h-auto object-cover mx-auto" />
-              <span className="absolute top-0 left-0 w-full h-full flex items-center justify-center text-purple-900 font-bold py-2 px-4">
-                Download Resume
-              </span>
-            </a>
-          </div>
-          <div>
-            <div className="relative">
-              <h3 className="text-purple-900 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold my-4 text-center shadow-glow">Proficiencies</h3>
-              <div className="absolute top-0 -inset-1 rounded-lg bg-light-pink bg-opacity-20 blur"></div>
+    <div className="fixed inset-0 bg-gradient-to-b from-gray-900 via-purple-900 to-gray-900">
+      <Sparkles particleColor="#FFFFFF" particleCount={200} minSize={1} maxSize={3} />
+      <Meteors meteorColor="#8B5CF6" meteorCount={15} />
+
+      <div className="absolute inset-0 overflow-auto">
+        <div className="relative z-10 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">Resume & Skills</h1>
+              <p className="text-lg text-purple-300">Full-Stack Web Developer & AI Engineer</p>
             </div>
-            <ul className="list-none space-y-2 pl-0 text-left md:text-center">
-            {proficiencies.map((skill, index) => (
-              <li key={index} className="text-gray-800 text-md sm:text-lg md:text-xl lg:text-2xl">{skill}</li>
-            ))}
-            </ul>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+              {/* Web Development Skills */}
+              <div className="bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-xl p-8">
+                <div className="flex items-center mb-6">
+                  <Code className="w-8 h-8 text-purple-400 mr-4" />
+                  <h2 className="text-2xl font-bold text-white">Web Development Skills</h2>
+                </div>
+                <ul className="space-y-2 text-purple-200">
+                  {webDevelopmentSkills.map((skill, index) => (
+                    <li key={index} className="flex items-center">
+                      <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* AI Skills */}
+              <div className="bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-xl p-8">
+                <div className="flex items-center mb-6">
+                  <Brain className="w-8 h-8 text-purple-400 mr-4" />
+                  <h2 className="text-2xl font-bold text-white">AI & Machine Learning Skills</h2>
+                </div>
+                <ul className="space-y-2 text-purple-200">
+                  {aiSkills.map((skill, index) => (
+                    <li key={index} className="flex items-center">
+                      <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Download Resume Button */}
+            <div className="text-center">
+              <a
+                href="/DanaFulmerTechResume.pdf"
+                download="DanaFulmerTechResume.pdf"
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition duration-150 ease-in-out"
+              >
+                <Download className="w-5 h-5 mr-2" />
+                Download Full Resume
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
-};
+}
 
 export default Resume;

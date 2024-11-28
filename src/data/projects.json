@@ -2,11 +2,16 @@
   {
     "id": 1,
     "title": "PreWork Study Guide",
-    "description": "This was my very first dip into coding, a simple study guide for the prework of the bootcamp I attended. It was created using HTML and CSS.",
+    "description": "This was my very first dip into coding, a simple study guide for the prework of the bootcamp I attended.",
     "image": "/assets/PWSG.png",
     "deployedUrl": "https://sikoticvinyl.github.io/prework-study-guide/",
     "repoUrl": "https://github.com/SikoticVinyl/prework-study-guide",
-    "type": "school"
+    "type": "school",
+    "category": "Full-Stack Web Development",
+    "isGroupProject": false,
+    "grade": "A",
+    "feedback": "Excellent start! Your HTML structure is clean and well-organized.",
+    "technologies": ["HTML", "CSS", "JavaScript"]
   },
   {
     "id": 2,
@@ -15,69 +20,11 @@
     "image": "/assets/EconoMe.png",
     "deployedUrl": "https://econome-rqta.onrender.com",
     "repoUrl": "https://github.com/SikoticVinyl/EconoMe",
-    "type": "school"
-  },
-  {
-    "id": 3,
-    "title": "Original Portfolio",
-    "description": "The first iteration of my portfolio as I was learning. I love to see how far I have come!",
-    "image": "/assets/OPF.png",
-    "deployedUrl": "https://sikoticvinyl.github.io/DanaPortfolio/",
-    "repoUrl": "https://github.com/SikoticVinyl/DanaPortfolio",
-    "type": "school"
-  },
-  {
-    "id": 4,
-    "title": "StaffSync",
-    "description": "I remember this being a fun backend assignment that I blasted through. Should have realized then how well I was picking up database CRUD functions.",
-    "image": "/assets/StaffSync.png",
-    "deployedUrl": "https://www.youtube.com/watch?v=TLx2vBaX-iA",
-    "repoUrl": "https://github.com/SikoticVinyl/StaffSync",
-    "type": "school"
-  },
-  {
-    "id": 5,
-    "title": "eNotes",
-    "description": "Another early bootcamp assignment, this time working on the backend with an RESTful API.",
-    "image": "../assets/NoteTaker.png",
-    "deployedUrl": "https://stormy-sands-88840-bd75ee7a710b.herokuapp.com/",
-    "repoUrl": "https://github.com/SikoticVinyl/eNotes",
-    "type": "school"
-  },
-  {
-    "id": 6,
-    "title": "Mongoose Mind Map",
-    "description": "As I said, I seem to enjoy the backend, here is where I began getting into MongoDB!",
-    "image": "/assets/MonMap.png",
-    "deployedUrl": "https://www.youtube.com/watch?v=wBqaDHDaTxE",
-    "repoUrl": "https://github.com/SikoticVinyl/MongooseMindMap",
-    "type": "school"
-  },
-  {
-    "id": 7,
-    "title": "TTRPG-Inventory-Bot BotOfHolding",
-    "description": "This project was a group project that I was part of, it was a really fun idea and I learned a lot about working with others in a coding environment. I also learned a lot about the Discord API. Building the bot was fun but I also learned about trying to keep a project organized and on track with a group. There was some major hurdles with the authentication and routing that prevented deployment. Some of us will be re-doing this together with our more developed skills as a passion project.",
-    "image": "/assets/BOH1.png",
-    "deployedUrl": "",
-    "repoUrl": "https://github.com/eymerin/TTRPG-Inventory-Bot",
-    "type": "school"
-  },
-  {
-    "id": 8,
-    "title": "GeneratingSteamHeat",
-    "description": "This is a README Generator that I created as a homework assignment. I was so proud of it, I used it to create the README for this portfolio!",
-    "image": "/assets/GSH.png",
-    "deployedUrl": "",
-    "repoUrl": "https://github.com/SikoticVinyl/GeneratingSteamHeat",
-    "type": "school"
-  },
-  {
-    "id": 9,
-    "title": "Forecaster",
-    "description": "This one I actually struggled a lot with. I learned a lot about APIs and how to use them.",
-    "image": "/assets/Fore.png",
-    "deployedUrl": "https://sikoticvinyl.github.io/Forecaster/",
-    "repoUrl": "https://github.com/SikoticVinyl/Forecaster",
-    "type": "school"
+    "type": "school",
+    "category": "Full-Stack Web Development",
+    "isGroupProject": true,
+    "grade": "A+",
+    "feedback": "Outstanding work on integrating complex financial calculations with a user-friendly interface.",
+    "technologies": ["React", "Node.js", "Express", "MongoDB"]
   }
 ]

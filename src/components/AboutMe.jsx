@@ -1,41 +1,65 @@
 import React from 'react';
-import DanaImage from '../assets/Dana.jpg';
+import { Sparkles } from './Sparkles';
+import { Meteors } from './Meteors';
+import Dana from '../assets/Dana.jpg';
+import Github from '../assets/Github.png';
+import Linkedin from '../assets/Linkedin.png';
 
-function AboutMe() {
+const AboutMe = () => {
   return (
-    <main className="container mx-auto pt-8 px-4 spacing">
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8" id="AboutMe">
-        <div className="md:col-span-2 bg-purple-200 bg-opacity-50 rounded-3xl p-8 text-center shadow-xl overflow-auto" style={{ maxHeight: '80vh', backdropFilter: 'blur(10px)' }}>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 text-center text-purple-900">About Me!</h2>
-          <p className="text-base md:text-lg lg:text-xl text-gray-800">
-            {/*About Me content*/}
-            Welcome to the digital playground of Vinyl Development, where galaxies collide, code comes to life, and every day is an adventure with my fur-covered crew and amazing partner in the stunning backdrop of St. George, Utah. Here, amidst the red rocks and desert skies, I've found my calling not just in the vastness of nature but in the boundless realms of web development and AI.
-            <br /><br />
-            My journey into the tech universe wasn't your typical rocket launch. It all started with a spark of curiosity and a PC build back in 2019. The thrill of assembling pieces into a functioning whole led me down a rabbit hole of discovery, from dabbling in the arts of bots and Discord servers to envisioning a career that didn't follow the traditional orbit. Enter the world of bootcamps — my gateway to becoming a full-stack web developer without the years-long voyage through theoretical academia. It was love at first code line, and I've been hooked ever since, crafting digital experiences and solving puzzles in ways I never imagined.
-            <br /><br />
-            Imagine this: a bootcamp grad with a penchant for backend magic and database design, finding zen in the orderly rows of data and the challenge of turning concepts into code. That's me. I thrived on the collaborative energy of group projects, aiming not just for the MVP but for something that felt like us, imbued with our collective spirit and hard work.
-            <br /><br />
-            But why stop at web development? The universe of AI beckons with its promise of uncharted territories. From crafting new universes with Midjourney to dialogues with ChatGPT, I've glimpsed the future, and I'm ready to dive in. By the end of 2024, I'll be wrapping my mind around AI even more, with plans to blend these new skills into a universe where web development meets intelligent innovation.
-            <br /><br />
-            Freelancing is my starship, offering the freedom to explore new worlds of creativity and apply my skills in meaningful ways while building my professional cosmos. React, databases, and bringing dream projects to life are just the beginning. What sets me apart? A gamer's eye for detail, a storyteller's heart, and a knack for making the complex feel simple, ensuring every user's journey is intuitive, engaging, and fun!
-            <br /><br />
-            Beyond the screen, life is an open-world game. Whether I'm rolling dice for a critical hit in our weekly Dungeons & Dragons campaign, leading my gaming community on Discord, or cycling through the stunning landscapes of Utah with my partner and our energetic border collie-corgi mix, Koda, every day is a new adventure. My latest quest? Mastering the art of baking focaccia bread, proof that even in the kitchen, I'm all about leveling up. These quests, from virtual dungeons to the real-world trails, ignite my creativity and infuse my approach to problem-solving and design with a unique blend of fun and functionality.
-            <br /><br />
-            Looking forward, I see a path filled with coding challenges, AI explorations, and projects that spark joy and innovation. My mission? To craft digital experiences that resonate, entertain, and make a difference, all while navigating the tech landscape with ethics and empathy. And who knows? Perhaps I'll also design that ultimate biking app for dog lovers or bring more AI companions into our online communities.
-            <br /><br />
-            So, to all potential collaborators and clients drifting through this digital galaxy: if you're looking for a developer who blends passion, creativity, and a gamer's enthusiasm for new challenges, you've landed in the right place. Let's join forces and create something out of this world.
-            <br /><br />
-            Welcome to my portfolio. I'm Dana Fulmer, ready to level up and bring your digital dreams to life. 
-            <br /><br />
-            Let the adventure begin!
-          </p>
-        </div>
-        <div className="md:col-span-1 flex justify-center items-center">
-          <img id="me" src={DanaImage} alt="Picture of Dana" className="rounded-lg object-cover w-full h-full max-w-none" style={{ minHeight: '300px' }} />
-        </div>
-      </section>
-    </main>
+    <div className="fixed inset-0 bg-gradient-to-b from-gray-900 via-purple-900 to-gray-900">
+      {/* Background effects */}
+      <Sparkles particleColor="#FFFFFF" particleCount={200} minSize={1} maxSize={3} />
+      <Meteors meteorColor="#8B5CF6" meteorCount={15} />
+
+      {/* Scrollable content container */}
+      <div className="absolute inset-0 overflow-auto">
+        {/* Main content */}
+        <main className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12 text-white min-h-screen flex items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
+            {/* Profile section */}
+            <div className="md:col-span-1 flex flex-col items-center mb-8 md:mb-0">
+              <div className="relative w-32 h-32 sm:w-48 sm:h-48 rounded-full overflow-hidden mb-4 border-4 border-purple-500 shadow-lg shadow-purple-500/50">
+                <img
+                  src={Dana}
+                  alt="Dana Fulmer"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h1 className="text-2xl sm:text-3xl font-bold mb-2 text-center">Dana Fulmer</h1>
+              <p className="text-lg sm:text-xl text-purple-300 mb-4 text-center">AI Software Engineer</p>
+              <div className="flex space-x-4 mb-6">
+                <a href="https://github.com/SikoticVinyl" target="_blank" rel="noopener noreferrer" 
+                   className="p-2 rounded-full hover:bg-gray-700 transition-colors">
+                  <img src={Github} alt="GitHub" className="w-6 h-6" />
+                </a>
+                <a href="https://www.linkedin.com/in/danafulmerdev" target="_blank" rel="noopener noreferrer"
+                   className="p-2 rounded-full hover:bg-gray-700 transition-colors">
+                  <img src={Linkedin} alt="LinkedIn" className="w-6 h-6" />
+                </a>
+              </div>
+            </div>
+
+            {/* About Me section */}
+            <div className="md:col-span-1 lg:col-span-2 bg-gray-800 bg-opacity-50 rounded-lg p-4 sm:p-6 backdrop-blur-sm">
+              <h2 className="text-xl sm:text-2xl font-semibold mb-4">About Me</h2>
+              <div className="space-y-4 text-sm sm:text-base text-gray-300">
+                <p>
+                  Welcome to the digital playground of Vinyl Development, where code meets artificial intelligence, and every day brings new opportunities for innovation in the stunning backdrop of St. George, Utah. Here, amidst the red rocks and desert skies, I've evolved from a web developer into an AI Software Engineer, bridging the gap between traditional development and the exciting frontiers of artificial intelligence.
+                </p>
+                <p>
+                  My journey into the tech universe has been an ever-expanding adventure. From that first PC build in 2019 to becoming a full-stack web developer through bootcamp training, each step has been driven by curiosity and a desire to push boundaries. Now, armed with comprehensive AI and machine learning certification, I've added powerful new tools to my developer toolkit – from Python-based machine learning models to natural language processing and deep learning techniques.
+                </p>
+                <p>
+                  Picture this: a developer who speaks both the language of web applications and artificial intelligence, finding harmony in the intersection of frontend finesse and AI innovation. I've mastered the art of creating Python scripts for data manipulation, building neural networks for predictions, and implementing NLP transformers, all while maintaining my passion for crafting engaging user experiences.
+                </p>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
   );
-}
+};
 
 export default AboutMe;
