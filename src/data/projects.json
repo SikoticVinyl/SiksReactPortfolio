@@ -1,30 +1,110 @@
 [
   {
     "id": 1,
-    "title": "PreWork Study Guide",
-    "description": "This was my very first dip into coding, a simple study guide for the prework of the bootcamp I attended.",
-    "image": "/assets/PWSG.png",
-    "deployedUrl": "https://sikoticvinyl.github.io/prework-study-guide/",
-    "repoUrl": "https://github.com/SikoticVinyl/prework-study-guide",
-    "type": "school",
-    "category": "Full-Stack Web Development",
-    "isGroupProject": false,
-    "grade": "A",
-    "feedback": "Excellent start! Your HTML structure is clean and well-organized.",
-    "technologies": ["HTML", "CSS", "JavaScript"]
-  },
-  {
-    "id": 2,
     "title": "EconoMe",
-    "description": "My Final Project of Bootcamp, a wonderfully dynamic budgeting app created using React",
+    "description": "A dynamic budgeting app created using React, Node.js, and MongoDB. This full-stack application allows users to track expenses, set budgets, and visualize spending patterns.",
     "image": "/assets/EconoMe.png",
     "deployedUrl": "https://econome-rqta.onrender.com",
     "repoUrl": "https://github.com/SikoticVinyl/EconoMe",
     "type": "school",
     "category": "Full-Stack Web Development",
     "isGroupProject": true,
-    "grade": "A+",
-    "feedback": "Outstanding work on integrating complex financial calculations with a user-friendly interface.",
-    "technologies": ["React", "Node.js", "Express", "MongoDB"]
+    "technologies": ["React", "Node.js", "Express", "MongoDB", "Chart.js"]
+  },
+  {
+    "id": 2,
+    "title": "StaffSync",
+    "description": "A comprehensive employee management system built with Node.js and MySQL. This application demonstrates proficiency in database CRUD operations and RESTful API design.",
+    "image": "/assets/StaffSync.png",
+    "deployedUrl": "https://www.youtube.com/watch?v=TLx2vBaX-iA",
+    "repoUrl": "https://github.com/SikoticVinyl/StaffSync",
+    "type": "school",
+    "category": "Full-Stack Web Development",
+    "isGroupProject": false,
+    "technologies": ["Node.js", "MySQL", "Express", "Inquirer"]
+  },
+  {
+    "id": 3,
+    "title": "eNotes",
+    "description": "A note-taking application showcasing backend development skills with RESTful API implementation. Users can create, read, update, and delete notes efficiently.",
+    "image": "/assets/NoteTaker.png",
+    "deployedUrl": "https://stormy-sands-88840-bd75ee7a710b.herokuapp.com/",
+    "repoUrl": "https://github.com/SikoticVinyl/eNotes",
+    "type": "school",
+    "category": "Full-Stack Web Development",
+    "isGroupProject": false,
+    "technologies": ["Node.js", "Express", "JavaScript", "HTML", "CSS"]
+  },
+  {
+    "id": 4,
+    "title": "Mongoose Mind Map",
+    "description": "An interactive mind mapping tool built with MongoDB and Mongoose. This project demonstrates proficiency in NoSQL database design and management.",
+    "image": "/assets/MonMap.png",
+    "deployedUrl": "https://www.youtube.com/watch?v=wBqaDHDaTxE",
+    "repoUrl": "https://github.com/SikoticVinyl/MongooseMindMap",
+    "type": "school",
+    "category": "Full-Stack Web Development",
+    "isGroupProject": false,
+    "technologies": ["MongoDB", "Mongoose", "Node.js", "Express"]
+  },
+  {
+    "id": 5,
+    "title": "TTRPG-Inventory-Bot BotOfHolding",
+    "description": "A Discord bot designed to manage inventories for tabletop RPG games. This group project showcases collaboration skills and proficiency in working with external APIs.",
+    "image": "/assets/BOH1.png",
+    "deployedUrl": "",
+    "repoUrl": "https://github.com/eymerin/TTRPG-Inventory-Bot",
+    "type": "school",
+    "category": "Full-Stack Web Development",
+    "isGroupProject": true,
+    "technologies": ["Node.js", "Discord.js", "MongoDB", "Express"]
+  },
+  {
+    "id": 6,
+    "title": "GeneratingSteamHeat",
+    "description": "A command-line README generator that streamlines the process of creating professional project documentation. This tool demonstrates proficiency in Node.js and command-line applications.",
+    "image": "/assets/GSH.png",
+    "deployedUrl": "",
+    "repoUrl": "https://github.com/SikoticVinyl/GeneratingSteamHeat",
+    "type": "school",
+    "category": "Full-Stack Web Development",
+    "isGroupProject": false,
+    "technologies": ["Node.js", "Inquirer", "Markdown"]
+  },
+  {
+    "id": 7,
+    "title": "Forecaster",
+    "description": "A weather forecasting application that integrates multiple third-party APIs to provide accurate and up-to-date weather information. This project showcases skills in API integration and asynchronous JavaScript.",
+    "image": "/assets/Fore.png",
+    "deployedUrl": "https://sikoticvinyl.github.io/Forecaster/",
+    "repoUrl": "https://github.com/SikoticVinyl/Forecaster",
+    "type": "school",
+    "category": "Full-Stack Web Development",
+    "isGroupProject": false,
+    "technologies": ["JavaScript", "HTML", "CSS", "OpenWeatherMap API"]
+  },
+  {
+    "id": 8,
+    "title": "Sentiment Analysis Tool",
+    "description": "An AI-powered sentiment analysis tool that uses natural language processing to determine the sentiment of text inputs. This project demonstrates proficiency in NLP and machine learning techniques.",
+    "image": "/assets/SentimentAnalysis.png",
+    "deployedUrl": "https://sentiment-analysis-tool.herokuapp.com",
+    "repoUrl": "https://github.com/SikoticVinyl/SentimentAnalysisTool",
+    "type": "school",
+    "category": "AI and Machine Learning",
+    "isGroupProject": false,
+    "technologies": ["Python", "NLTK", "Scikit-learn", "Flask", "Pandas"]
+  },
+  {
+    "id": 9,
+    "title": "AI-Powered Image Recognition System",
+    "description": "A group project that implements a sophisticated image recognition system using deep learning techniques. This application can identify objects, faces, and text in images with high accuracy.",
+    "image": "/assets/ImageRecognition.png",
+    "deployedUrl": "https://ai-image-recognition.herokuapp.com",
+    "repoUrl": "https://github.com/AITeam/ImageRecognitionSystem",
+    "type": "school",
+    "category": "AI and Machine Learning",
+    "isGroupProject": true,
+    "technologies": ["Python", "TensorFlow", "Keras", "OpenCV", "Flask", "React"]
   }
 ]
