@@ -104,7 +104,7 @@ function Contact() {
               <div>
                 <p className="text-white font-medium">Email</p>
                 <a href="mailto:contact@example.com" className="text-purple-300 hover:text-purple-400 transition-colors">
-                  contact@example.com
+                vinylwebdevelopment@gmail.com
                 </a>
               </div>
             </div>
@@ -136,7 +136,7 @@ function Contact() {
                 <Github className="w-5 h-5 text-white" />
               </a>
               <a
-                href="https://www.linkedin.com/in/dana-fulmer-a4b1b5291/"
+                href="https://www.linkedin.com/in/danafulmerdev/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-purple-600 rounded-full hover:bg-purple-700 transition-colors"
