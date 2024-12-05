@@ -85,15 +85,24 @@
   },
   {
     "id": 8,
-    "title": "Sentiment Analysis Tool",
-    "description": "An AI-powered sentiment analysis tool that uses natural language processing to determine the sentiment of text inputs. This project demonstrates proficiency in NLP and machine learning techniques.",
-    "image": "/assets/SentimentAnalysis.png",
-    "deployedUrl": "https://sentiment-analysis-tool.herokuapp.com",
-    "repoUrl": "https://github.com/SikoticVinyl/SentimentAnalysisTool",
+    "title": "Time Series Analysis with Prophet",
+    "description": "This project involves analyzing and forecasting search trends data for MercadoLibre, an e-commerce platform, using Facebook's Prophet library for time series analysis. The project focuses on identifying trends, seasonality, and correlations between search traffic and stock price patterns.",
+    "image": "",
+    "deployedUrl": "",
+    "repoUrl": "https://github.com/SikoticVinyl/prophet-challenge",
     "type": "school",
     "category": "AI and Machine Learning",
     "isGroupProject": false,
-    "technologies": ["Python", "NLTK", "Scikit-learn", "Flask", "Pandas"]
+    "technologies": [
+        "Python",
+        "Pandas",
+        "Prophet",
+        "Matplotlib",
+        "NumPy",
+        "Time-Series Analysis",
+        "Correlation Analysis",
+        "Rolling Statistics"
+    ]
   },
   {
     "id": 9,
