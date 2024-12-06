@@ -1,20 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { useParams } from 'react-router-dom';
 import Project from './Project';
 import projectData from '../data/projects.json';
-import { ChevronRight, FolderIcon, Code, Brain } from 'lucide-react';
+import { ChevronRight, FolderIcon, Code, Brain, Users, User } from 'lucide-react';
 
 const PortfolioPage = () => {
   const { category } = useParams();
   const [openCategories, setOpenCategories] = useState({});
 
-  const filteredProjects = projectData.filter(project => {
-    if (category === 'personal') return project.type === 'personal';
-    if (category === 'bootcamp') return project.type === 'school';
-    return false;
-  });
+  const filteredProjects = useMemo(() => {
+    if (!Array.isArray(projectData)) return [];
+    
+    return projectData.filter(project => {
+      if (category === 'personal') return project.type === 'personal';
+      if (category === 'bootcamp') return project.type === 'school';
+      return false;
+    });
+  }, [category]);
 
-  const categories = [...new Set(filteredProjects.map(project => project.category))];
+  const categories = useMemo(() => {
+    if (!Array.isArray(filteredProjects)) return [];
+    return [...new Set(filteredProjects.map(project => project.category))].filter(Boolean);
+  }, [filteredProjects]);
 
   const toggleCategory = (categoryName) => {
     setOpenCategories(prev => ({
@@ -33,6 +40,25 @@ const PortfolioPage = () => {
         return <FolderIcon className="w-5 h-5" />;
     }
   };
+
+  const getProjectsByType = (projectCategory, isGroup) => {
+    if (!Array.isArray(filteredProjects)) return [];
+    return filteredProjects.filter(project => 
+      project.category === projectCategory && 
+      Boolean(project.isGroupProject) === isGroup
+    );
+  };
+
+  if (!Array.isArray(filteredProjects) || filteredProjects.length === 0) {
+    return (
+      <div className="py-8 sm:py-12 text-center">
+        <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+          {category.charAt(0).toUpperCase() + category.slice(1)} Projects
+        </h1>
+        <p className="text-gray-300">No projects found in this category.</p>
+      </div>
+    );
+  }
 
   return (
     <div className="py-8 sm:py-12">
@@ -106,18 +132,46 @@ const PortfolioPage = () => {
 
         {/* Projects grid */}
         <div className="lg:col-span-3">
-          {categories.map((projectCategory) => (
-            <div key={projectCategory} className={`mb-8 ${openCategories[projectCategory] ? '' : 'hidden'}`}>
-              <h2 className="text-xl sm:text-2xl font-semibold text-purple-300 mb-4">{projectCategory}</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredProjects
-                  .filter(project => project.category === projectCategory)
-                  .map(project => (
-                    <Project key={project.id} {...project} />
-                  ))}
+          {categories.map((projectCategory) => {
+            const groupProjects = getProjectsByType(projectCategory, true);
+            const individualProjects = getProjectsByType(projectCategory, false);
+
+            return (
+              <div key={projectCategory} className={`mb-12 ${openCategories[projectCategory] ? '' : 'hidden'}`}>
+                <h2 className="text-xl sm:text-2xl font-semibold text-purple-300 mb-6">{projectCategory}</h2>
+                
+                {/* Group Projects */}
+                {groupProjects.length > 0 && (
+                  <div className="mb-8">
+                    <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
+                      <Users className="w-5 h-5 mr-2" />
+                      Group Projects
+                    </h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                      {groupProjects.map(project => (
+                        <Project key={project.id} {...project} />
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Individual Projects */}
+                {individualProjects.length > 0 && (
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
+                      <User className="w-5 h-5 mr-2" />
+                      Individual Projects
+                    </h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                      {individualProjects.map(project => (
+                        <Project key={project.id} {...project} />
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>

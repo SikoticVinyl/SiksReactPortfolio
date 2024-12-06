@@ -87,7 +87,7 @@
     "id": 8,
     "title": "Time Series Analysis with Prophet",
     "description": "This project involves analyzing and forecasting search trends data for MercadoLibre, an e-commerce platform, using Facebook's Prophet library for time series analysis. The project focuses on identifying trends, seasonality, and correlations between search traffic and stock price patterns.",
-    "image": "/assets/prophet.png",
+    "image": "/assets/prophetgraph.png",
     "deployedUrl": "",
     "repoUrl": "https://github.com/SikoticVinyl/prophet-challenge",
     "type": "school",
