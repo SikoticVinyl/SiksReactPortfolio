@@ -1,7 +1,41 @@
-import React from 'react';
-import { ExternalLink, Github } from 'lucide-react';
+import React, { useState, useRef, useLayoutEffect } from 'react';
+import { ExternalLink, Github, ChevronDown, ChevronUp } from 'lucide-react';
 
 const Project = ({ title, description, image, deployedUrl, repoUrl, technologies }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [hasOverflow, setHasOverflow] = useState(false);
+  const descriptionRef = useRef(null);
+
+  const MIN_CHARS_FOR_OVERFLOW = 200;
+  const shouldShowReadMore = description.length > MIN_CHARS_FOR_OVERFLOW && hasOverflow;
+
+  const toggleExpanded = () => {
+    setIsExpanded(prev => !prev);
+  };
+
+  useLayoutEffect(() => {
+    const checkOverflow = () => {
+      if (descriptionRef.current) {
+        const isOverflowing = descriptionRef.current.scrollHeight > descriptionRef.current.clientHeight;
+        setHasOverflow(isOverflowing);
+      }
+    };
+
+    checkOverflow();
+
+    // Set up ResizeObserver to check for overflow on content changes
+    const resizeObserver = new ResizeObserver(checkOverflow);
+    if (descriptionRef.current) {
+      resizeObserver.observe(descriptionRef.current);
+    }
+
+    return () => {
+      if (descriptionRef.current) {
+        resizeObserver.unobserve(descriptionRef.current);
+      }
+    };
+  }, [description]);
+
   return (
     <div className="bg-gray-800 bg-opacity-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
       <div className="relative">
@@ -42,7 +76,32 @@ const Project = ({ title, description, image, deployedUrl, repoUrl, technologies
       </div>
       <div className="p-4">
         <h3 className="font-bold text-lg mb-2 text-white">{title}</h3>
-        <p className="text-gray-300 text-sm mb-4 line-clamp-3">{description}</p>
+        <div className="relative">
+          <div
+            ref={descriptionRef}
+            className={`text-gray-300 text-sm mb-4 overflow-hidden transition-all duration-300 ease-in-out ${
+              isExpanded ? 'max-h-[500px]' : 'max-h-24'
+            }`}
+          >
+            <p className="pr-2">{description}</p>
+          </div>
+          {shouldShowReadMore && (
+            <button
+              onClick={toggleExpanded}
+              className="w-full text-center py-1 text-purple-400 hover:text-purple-300 transition-colors duration-200 flex items-center justify-center gap-1 group"
+            >
+              <span>{isExpanded ? 'Show Less' : 'Read More'}</span>
+              {isExpanded ? (
+                <ChevronUp className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform duration-200" />
+              ) : (
+                <ChevronDown className="w-4 h-4 group-hover:translate-y-0.5 transition-transform duration-200" />
+              )}
+            </button>
+          )}
+          {!isExpanded && shouldShowReadMore && (
+            <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-gray-800 to-transparent pointer-events-none" />
+          )}
+        </div>
         {technologies && (
           <div className="mb-4">
             <h4 className="font-semibold text-purple-300 mb-2">Technologies:</h4>

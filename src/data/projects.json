@@ -87,7 +87,7 @@
     "id": 8,
     "title": "Time Series Analysis with Prophet",
     "description": "This project involves analyzing and forecasting search trends data for MercadoLibre, an e-commerce platform, using Facebook's Prophet library for time series analysis. The project focuses on identifying trends, seasonality, and correlations between search traffic and stock price patterns.",
-    "image": "/assets/prophet.png",
+    "image": "/assets/prophetgraph.png",
     "deployedUrl": "",
     "repoUrl": "https://github.com/SikoticVinyl/prophet-challenge",
     "type": "school",
@@ -106,14 +106,90 @@
   },
   {
     "id": 9,
-    "title": "",
-    "description": "A group project that implements a sophisticated image recognition system using deep learning techniques. This application can identify objects, faces, and text in images with high accuracy.",
-    "image": "/assets/ImageRecognition.png",
+    "title": "Student Loan Risk Assessment Neural Network",
+    "description": "This project implements a neural network model to assess student loan risk and recommend loan options. Using TensorFlow/Keras, the system analyzes various student attributes to predict credit rankings and provide personalized loan recommendations. Features include data preprocessing, model evaluation, and context-based filtering for loan recommendations, with export/import functionality for trained models.",
+    "image": "/assets/nn1.png",
     "deployedUrl": "",
-    "repoUrl": "https://github.com/SikoticVinyl/Project1",
+    "repoUrl": "https://github.com/SikoticVinyl/neural-network-challenge-1",
+    "type": "school",
+    "category": "AI and Machine Learning",
+    "isGroupProject": false,
+    "technologies": [
+        "Python",
+        "TensorFlow",
+        "Keras",
+        "Pandas",
+        "Scikit-learn",
+        "StandardScaler",
+        "Deep Learning",
+        "Neural Networks",
+        "Classification Models"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "SMS Spam Detection Project",
+    "description": "A machine learning project to detect spam SMS messages using a Support Vector Machine (SVM) model and TF-IDF vectorization. The project features a Gradio web interface for easy testing, including enhanced preprocessing for better spam detection. It highlights the challenges of improving accuracy by refining text preprocessing and adjusting the model's sensitivity to spam indicators.",
+    "image": "/assets/gradio.png",
+    "deployedUrl": "",
+    "repoUrl": "https://github.com/SikoticVinyl/sms_spam_detector",
+    "type": "school",
+    "category": "AI and Machine Learning",
+    "isGroupProject": false,
+    "technologies": [
+        "Python",
+        "Scikit-learn",
+        "TF-IDF Vectorizer",
+        "Linear SVM",
+        "Gradio",
+        "Text Preprocessing",
+        "Pipeline",
+        "Natural Language Processing (NLP)"
+    ]
+  },
+  {
+    "id": 11,
+    "title": "VictorVis (VictoryVision)",
+    "description": "This group project predicts match winners in esports using machine learning models like Random Forest and XGBoost. The project analyzes player ratings from HLTV and team-level data to forecast match outcomes by leveraging statistics such as kills per round, damage per round, and player impact ratings. Despite data limitations, the team adapted to use player and team statistics as proxies for match outcomes, yielding insights into significant predictors of performance and rankings.",
+    "image": "/assets/VV1.png",
+    "deployedUrl": "",
+    "repoUrl": "https://github.com/SikoticVinyl/VictorVis",
     "type": "school",
     "category": "AI and Machine Learning",
     "isGroupProject": true,
-    "technologies": ["Python", "TensorFlow", "Keras", "OpenCV", "Flask", "React"]
+    "technologies": [
+        "Python",
+        "Random Forest",
+        "XGBoost",
+        "Linear Regression",
+        "Data Cleaning",
+        "Exploratory Data Analysis",
+        "Feature Engineering",
+        "Hyperparameter Optimization"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "VictorVis 2.0: Advanced Esports Match Prediction",
+    "description": "VictorVis 2.0 builds upon the original VictorVis project, refining its focus to predict esports match outcomes using player-specific statistics. Leveraging APIs like the Halo API and GRID API, this iteration enhances data collection, feature engineering, and modeling to provide deeper insights into individual player performance and match predictions.",
+    "image": "/assets/VV2.png",
+    "deployedUrl": "",
+    "repoUrl": "https://github.com/SikoticVinyl/VictorVis2.0",
+    "type": "school",
+    "category": "AI and Machine Learning",
+    "isGroupProject": true,
+    "technologies": [
+      "Python",
+      "Pandas",
+      "NumPy",
+      "Scikit-learn",
+      "XGBoost",
+      "TensorFlow",
+      "LightGBM",
+      "Neural Networks",
+      "StandardScaler",
+      "GRID API",
+      "Halo API"
+    ]
   }
 ]
