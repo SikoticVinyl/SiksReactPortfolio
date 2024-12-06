@@ -130,7 +130,7 @@
     "id": 10,
     "title": "SMS Spam Detection Project",
     "description": "A machine learning project to detect spam SMS messages using a Support Vector Machine (SVM) model and TF-IDF vectorization. The project features a Gradio web interface for easy testing, including enhanced preprocessing for better spam detection. It highlights the challenges of improving accuracy by refining text preprocessing and adjusting the model's sensitivity to spam indicators.",
-    "image": "",
+    "image": "/assets/gradio.png",
     "deployedUrl": "",
     "repoUrl": "https://github.com/SikoticVinyl/sms_spam_detector",
     "type": "school",
