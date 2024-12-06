@@ -106,14 +106,45 @@
   },
   {
     "id": 9,
-    "title": "",
-    "description": "A group project that implements a sophisticated image recognition system using deep learning techniques. This application can identify objects, faces, and text in images with high accuracy.",
-    "image": "/assets/ImageRecognition.png",
+    "title": "Student Loan Risk Assessment Neural Network",
+    "description": "This project implements a neural network model to assess student loan risk and recommend loan options. Using TensorFlow/Keras, the system analyzes various student attributes to predict credit rankings and provide personalized loan recommendations. Features include data preprocessing, model evaluation, and context-based filtering for loan recommendations, with export/import functionality for trained models.",
+    "image": "/assets/nn1.png",
     "deployedUrl": "",
-    "repoUrl": "https://github.com/SikoticVinyl/Project1",
+    "repoUrl": "https://github.com/SikoticVinyl/neural-network-challenge-1",
     "type": "school",
     "category": "AI and Machine Learning",
-    "isGroupProject": true,
-    "technologies": ["Python", "TensorFlow", "Keras", "OpenCV", "Flask", "React"]
-  }
+    "isGroupProject": false,
+    "technologies": [
+        "Python",
+        "TensorFlow",
+        "Keras",
+        "Pandas",
+        "Scikit-learn",
+        "StandardScaler",
+        "Deep Learning",
+        "Neural Networks",
+        "Classification Models"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "SMS Spam Detection Project",
+    "description": "A machine learning project to detect spam SMS messages using a Support Vector Machine (SVM) model and TF-IDF vectorization. The project features a Gradio web interface for easy testing, including enhanced preprocessing for better spam detection. It highlights the challenges of improving accuracy by refining text preprocessing and adjusting the model's sensitivity to spam indicators.",
+    "image": "",
+    "deployedUrl": "",
+    "repoUrl": "https://github.com/SikoticVinyl/sms_spam_detector",
+    "type": "school",
+    "category": "AI and Machine Learning",
+    "isGroupProject": false,
+    "technologies": [
+        "Python",
+        "Scikit-learn",
+        "TF-IDF Vectorizer",
+        "Linear SVM",
+        "Gradio",
+        "Text Preprocessing",
+        "Pipeline",
+        "Natural Language Processing (NLP)"
+    ]
+}
 ]
