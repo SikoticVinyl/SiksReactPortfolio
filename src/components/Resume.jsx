@@ -17,6 +17,11 @@ function Resume() {
     "API interaction for AI services", "AI ethics and emerging technologies",
   ];
 
+  const handleDownload = () => {
+    // Using window.open as a fallback
+    window.open('/DanaFulmerTechResume.pdf', '_blank');
+  };
+
   return (
     <div className="py-8 sm:py-12">
       <div className="text-center mb-8">
@@ -24,14 +29,13 @@ function Resume() {
         <p className="text-lg text-purple-300 mb-6">Full-Stack Web Developer & AI Engineer</p>
 
         {/* Download Resume Button */}
-        <a
-          href="/DanaFulmerTechResume.pdf"
-          download="DanaFulmerTechResume.pdf"
-          className="inline-flex items-center px-8 py-4 text-lg font-semibold rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition duration-150 ease-in-out shadow-lg hover:shadow-xl"
+        <button
+          onClick={handleDownload}
+          className="inline-flex items-center px-6 py-3 text-lg font-semibold rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-200 ease-in-out shadow-lg hover:shadow-xl transform hover:-translate-y-1 cursor-pointer"
         >
-          <Download className="w-6 h-6 mr-2" />
+          <Download className="w-5 h-5 mr-2" />
           Download Full Resume
-        </a>
+        </button>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
