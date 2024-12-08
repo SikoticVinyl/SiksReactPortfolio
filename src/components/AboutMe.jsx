@@ -4,6 +4,21 @@ import Github from '../assets/Github.png';
 import Linkedin from '../assets/Linkedin.png';
 
 const AboutMe = () => {
+  const socialLinks = [
+    {
+      name: 'GitHub',
+      icon: Github,
+      url: 'https://github.com/SikoticVinyl',
+      hoverText: 'Visit my GitHub'
+    },
+    {
+      name: 'LinkedIn',
+      icon: Linkedin,
+      url: 'https://www.linkedin.com/in/danafulmerdev',
+      hoverText: 'Connect on LinkedIn'
+    }
+  ];
+
   return (
     <div className="py-8 sm:py-12">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
@@ -18,15 +33,28 @@ const AboutMe = () => {
           </div>
           <h1 className="text-2xl sm:text-3xl font-bold mb-2 text-center text-white">Dana Fulmer</h1>
           <p className="text-lg sm:text-xl text-purple-300 mb-4 text-center">AI Software Engineer</p>
-          <div className="flex space-x-4 mb-6">
-            <a href="https://github.com/SikoticVinyl" target="_blank" rel="noopener noreferrer" 
-               className="p-2 rounded-full hover:bg-gray-700 transition-colors">
-              <img src={Github} alt="GitHub" className="w-6 h-6" />
-            </a>
-            <a href="https://www.linkedin.com/in/dana-fulmer-a4b1b5291/" target="_blank" rel="noopener noreferrer"
-               className="p-2 rounded-full hover:bg-gray-700 transition-colors">
-              <img src={Linkedin} alt="LinkedIn" className="w-6 h-6" />
-            </a>
+          
+          {/* Enhanced Social Links */}
+          <div className="flex space-x-6 mb-6">
+            {socialLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative p-3 rounded-full bg-gray-800 hover:bg-purple-600 transition-all duration-300 transform hover:scale-110"
+                title={link.hoverText}
+              >
+                <img 
+                  src={link.icon} 
+                  alt={link.name} 
+                  className="w-6 h-6 group-hover:brightness-125"
+                />
+                <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm text-purple-300 whitespace-nowrap">
+                  {link.name}
+                </span>
+              </a>
+            ))}
           </div>
         </div>
 
